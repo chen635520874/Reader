@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Reader</string>
+    <string name="scale_up_show_behavior">com.chen.reader.behavior.ScaleUpShowBehavior</string>
+    <string name="check_updata">检查更新</string>
 </resources>
