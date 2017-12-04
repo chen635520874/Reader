@@ -2,4 +2,9 @@
     <string name="app_name">Reader</string>
     <string name="scale_up_show_behavior">com.chen.reader.behavior.ScaleUpShowBehavior</string>
     <string name="check_updata">检查更新</string>
+    <string name="jump">跳过</string>
+    <string name="title_text_content">加载网页中..</string>
+    <string name="homepage">项目主页</string>
+    <string name="about">关于我们</string>
+    <string name="more">更多相关</string>
 </resources>

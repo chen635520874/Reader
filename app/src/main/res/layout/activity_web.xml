@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPageBg"
+    tools:context="com.chen.reader.module.web.WebActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/web_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/web_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:fitsSystemWindows="true"
+            app:navigationIcon="@mipmap/icon_back">
+
+            <TextView
+                android:id="@+id/web_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_text_content"
+                android:ellipsize="end"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:textSize="@dimen/title_text_size"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/web_progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_gravity="center"
+            android:paddingTop="0dp"
+            android:progressDrawable="@drawable/progressbar"
+            android:visibility="visible"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
+
+
+
+</LinearLayout>
