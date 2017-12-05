@@ -50,6 +50,7 @@ public class App extends Application {
         LeakCanary.install(this);
 
         BGASwipeBackManager.getInstance().init(this);
+        ConfigManage.INSTSNCE.initConfig(this);
     }
 
     /**
