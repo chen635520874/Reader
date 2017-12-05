@@ -7,4 +7,6 @@
     <string name="homepage">项目主页</string>
     <string name="about">关于我们</string>
     <string name="more">更多相关</string>
+    <string name="rv_with_footer_empty">没有数据啦</string>
+    <string name="loading">加载中..</string>
 </resources>
