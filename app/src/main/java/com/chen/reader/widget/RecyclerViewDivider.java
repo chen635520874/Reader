@@ -19,6 +19,8 @@ public class RecyclerViewDivider extends RecyclerView.ItemDecoration{
     private Drawable mDivider;
     private int mDividerHeight=2; //分割线的高度，默认1px
     private int mOrientation;//列表的方向：LinearlayoutManager.VERTICAL或LinearlayoutManager.HORIZATION
+
+    //我们通过获取系统属性中的listDivider来添加，在系统中的AppTheme中设置
     private static final int[] ATTRS= new int[]{android.R.attr.listDivider};
 
     public RecyclerViewDivider(Context context,int orientation){
@@ -47,6 +49,24 @@ public class RecyclerViewDivider extends RecyclerView.ItemDecoration{
         }
     }
 
+    private void drawHorizontion(Canvas canvas,RecyclerView parent){
+        final int left = parent.getPaddingLeft();
+        final int right = parent.getMeasuredWidth()-parent.getPaddingRight();
+        final int childSize = parent.getChildCount();
+        for (int i=0;i<childSize;i++){
+            final View child = parent.getChildAt(i);
+            RecyclerView.LayoutParams layoutParams= (RecyclerView.LayoutParams) child.getLayoutParams();
+            final int top = child.getBottom()+layoutParams.bottomMargin;
+            final int bottom = top+mDividerHeight;
+            if (mDivider!=null){
+                mDivider.setBounds(left,top,right,bottom);
+                mDivider.draw(canvas);
+            }
+        }
+    }
+
+
+    //绘制纵向 item 分割线
     private void drawVertical(Canvas canvas,RecyclerView parent){
         final int top = parent.getPaddingTop();
         final int bottom = parent.getMeasuredHeight()-parent.getPaddingBottom();
