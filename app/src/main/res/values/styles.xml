@@ -21,6 +21,18 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowFullscreen">true</item>
     </style>
+
+    <!--自定义通知对话框dialog-->
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <!--Dialog的WindowFrame框为伍-->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--对话框是否悬浮在Activity上面-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:dialogPreferredPadding">120dp</item>
+    </style>
     
     <style name="MyToolbar" parent="Widget.AppCompat.Toolbar">
         <item name="contentInsetStart">0dp</item>
