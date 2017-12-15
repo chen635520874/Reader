@@ -121,7 +121,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BGASwipe
      * 是否支持滑动返回
      * @return
      */
-    public boolean isSupportSwiprBack(){
+    public boolean isSupportSwipeBack(){
         return true;
     }
 

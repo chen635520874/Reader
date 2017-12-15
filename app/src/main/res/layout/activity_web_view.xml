@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorPageBg"
-    tools:context="com.chen.reader.module.web.WebActivity">
+    tools:context="com.chen.reader.module.web.WebViewActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/web_appbar"

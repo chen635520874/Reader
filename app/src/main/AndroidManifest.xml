@@ -19,7 +19,7 @@
         <activity android:name=".module.navabout.NavAboutActivity" />
         <activity android:name=".module.picture.PictureActivity" />
         <activity android:name=".module.splash.SplashActivity" />
-        <activity android:name=".module.web.WebActivity"></activity>
+        <activity android:name=".module.web.WebViewActivity"></activity>
     </application>
 
 </manifest>

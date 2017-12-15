@@ -10,4 +10,6 @@
     <string name="rv_with_footer_empty">没有数据啦</string>
     <string name="loading">加载中..</string>
     <string name="actionShare">分享</string>
+    <string name="nowVersion">当前版本</string>
+    <string name="no_new_version">已经是最新版(⊙o⊙)哦</string>
 </resources>
