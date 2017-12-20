@@ -74,10 +74,7 @@ public class WebViewActivity extends BaseActivity implements IWebView {
         mWebPresenter.unSubscribe();
     }
 
-   /* @Override
-    public boolean isSupportSwipeBack() {
-        return false;
-    }*/
+
 
     @Override
     public Activity getWebViewContext() {

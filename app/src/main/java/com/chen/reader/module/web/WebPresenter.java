@@ -20,10 +20,12 @@ public class WebPresenter implements IWebPresenter {
         this.mWebView = mWebView;
     }
 
+    /**
+     * 起一个传递信息的作用
+     */
     @Override
     public void subscribe() {
-        mActivity = mWebView.getWebViewContext();
-        Intent intent = mActivity.getIntent();
+        mActivity = mWebView.getWebViewContext();        Intent intent = mActivity.getIntent();
         mWebView.setGankTitle(intent.getStringExtra(WebViewActivity.GANK_TITLE));
         mWebView.initWebView();
         mGankUrl = intent.getStringExtra(WebViewActivity.GANK_URL);
