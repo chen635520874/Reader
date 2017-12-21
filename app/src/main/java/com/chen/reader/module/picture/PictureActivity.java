@@ -27,6 +27,7 @@ import com.chen.reader.utils.Utils;
 import com.youth.banner.Banner;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class PictureActivity extends BaseActivity implements PictureContract.PictureView {
 
@@ -65,7 +66,7 @@ public class PictureActivity extends BaseActivity implements PictureContract.Pic
         ActivityCompat.startActivity(activity,intent,activityOptionsCompat.toBundle());
     }
 
-    public void parseIntent(){
+        public void parseIntent(){
         mImageUrl = getIntent().getStringExtra(EXTRA_IMAGE_URL);
         mImageTitle = getIntent().getStringExtra(EXTRA_IMAGE_TITLE);
     }
@@ -106,19 +107,40 @@ public class PictureActivity extends BaseActivity implements PictureContract.Pic
                 });
     }
 
+    /**
+     * 点击了保存的按钮就调用savePicture()方法
+     */
+    @OnClick(R.id.picture_btn_save)
+    public void onSaveClick(){
+        if (presenter!=null){
+            presenter.savePicture(mImageUrl,imageView.getWidth(),imageView.getHeight(),mImageTitle);
+        }
+    }
+
+    @OnClick(R.id.picture_img)
+    public void onPictureClick(){
+        if (getSupportActionBar()!=null){
+            if (getSupportActionBar().isShowing()){
+                getSupportActionBar().hide();
+            }else {
+                getSupportActionBar().show();
+            }
+        }
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_picture);
+    protected void onDestroy() {
+        super.onDestroy();
+        System.gc();
     }
 
     @Override
     public void showProgress() {
-
+        progressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void hideProgress() {
-
+        progressBar.setVisibility(View.GONE);
     }
 }
