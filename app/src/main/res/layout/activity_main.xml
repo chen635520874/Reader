@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/mainActivity"
-    tools:context="com.chen.reader.base.BaseActivity">
+    tools:context="com.chen.reader.module.home.HomeActivity">
 
    <android.support.design.widget.CoordinatorLayout
        android:layout_height="match_parent"
@@ -41,8 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="225dp"
                 app:layout_collapseMode="parallax"
-                app:layout_collapseParallaxMultiplier="0.4"><!--视差系数介于0.0-1.0-->
-            </com.youth.banner.Banner>
+                app:layout_collapseParallaxMultiplier="0.4"/><!--视差系数介于0.0-1.0-->
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/main_toolbar"
@@ -75,17 +74,16 @@
           android:layout_height="match_parent"
           app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-      <android.support.design.widget.FloatingActionButton
-          android:id="@+id/main_fab"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:visibility="gone"
-          android:src="@mipmap/abc_ic_ab_back_top"
-          android:layout_margin="16dp"
-          android:layout_gravity="bottom|end"
-          app:layout_behavior="@string/scale_up_show_behavior"
-          app:layout_scrollFlags="scroll|enterAlways|snap"/>
-
+     <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_fab"
+        android:visibility="visible"
+        android:src = "@mipmap/abc_ic_ab_back_top"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        app:layout_behavior="@string/scale_up_show_behavior"
+        app:layout_scrollFlags="scroll|enterAlways|snap"/>
    </android.support.design.widget.CoordinatorLayout>
 
    <android.support.design.widget.NavigationView

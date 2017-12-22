@@ -69,7 +69,7 @@ public class HomePresenter implements IHomePresenter {
                     @Override
                     public void onNext(CategoryResult categoryResult) {
                         if (categoryResult!=null && categoryResult.result != null && categoryResult.result.size()>0){
-                            List<String> imgUrls = new ArrayList<String>();
+                            List<String> imgUrls = new ArrayList<>();
                             for (ResultsBean resultsBean : categoryResult.result){
                                 if (!resultsBean.url.isEmpty()){
                                     imgUrls.add(resultsBean.url);

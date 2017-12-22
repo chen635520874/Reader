@@ -5,6 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<com.chen.reader.widget.RecyclerViewWithFooter.RecyclerViewWithFooter
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+</com.chen.reader.widget.RecyclerViewWithFooter.RecyclerViewWithFooter>
 
 </android.support.v4.widget.SwipeRefreshLayout>
