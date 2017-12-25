@@ -11,11 +11,16 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/12/14.
+ * <T>表示泛型  数据决定采用泛型，布局打算直接构造传递，绑定显示效果回传。
+ *
  */
 
-public abstract class CommonRecyclerAdapter <T> extends RecyclerView.Adapter{
+public abstract class CommonRecyclerAdapter<T> extends RecyclerView.Adapter{
+
     protected Context mContext;
+    //数据怎么办？利用泛型
     protected List<T> mData;
+    // 布局怎么办？直接从构造里面传递
     private int layoutId;
     private View mView;
 

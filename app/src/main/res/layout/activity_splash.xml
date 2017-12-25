@@ -14,6 +14,7 @@
         android:scaleType="fitXY"/>
 
     <TextView
+        android:id="@+id/splash_tv_jump"
         android:layout_width="70dp"
         android:layout_height="30dp"
         android:layout_alignParentRight="true"

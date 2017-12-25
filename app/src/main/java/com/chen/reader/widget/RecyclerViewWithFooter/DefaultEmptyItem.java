@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nanchen.aiyagirl.R;
+import com.chen.reader.R;
 
 
 /**
